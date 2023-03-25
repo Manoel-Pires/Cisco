@@ -9,8 +9,8 @@ password dltecconsole
 login
 exit
 line vty 0 15
-login local
-exit
-transport input all ! ssh telnet
+ login local
+ exit
+ transport input all ! ssh telnet
 service password-encryption
 banner motd @ Equipamentos Restritos ao Time de Redes @
