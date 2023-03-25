@@ -1,0 +1,16 @@
+hostname 
+enable secret dltecenable
+Username dltecadmin secret dltecvty
+ip domain-name dltec-com.br
+crypto key generate rsa general-keys modulus 1024
+no aaa new-model
+line consolo 0
+password dltecconsole
+login
+exit
+line vty 0 15
+login local
+exit
+transport input all ! ssh telnet
+service password-encryption
+banner motd @ Equipamentos Restritos ao Time de Redes @
