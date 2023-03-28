@@ -1,16 +1,23 @@
+
+clock set 22:14:50 27 mar 2023
+conf t
 hostname 
 enable secret dltecenable
 Username dltecadmin secret dltecvty
 ip domain-name dltec-com.br
 crypto key generate rsa general-keys modulus 1024
 no aaa new-model
-line consolo 0
+line console 0
 password dltecconsole
 login
 exit
 line vty 0 15
  login local
- exit
  transport input all ! ssh telnet
+ exit
 service password-encryption
 banner motd @ Equipamentos Restritos ao Time de Redes @
+!
+end
+!
+copy run start
